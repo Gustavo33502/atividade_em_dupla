@@ -19,9 +19,7 @@ def test_processar_compra_aprovada(mocker):
 
 
 def test_processar_compra_recusada_sem_limite(mocker):
-    """
-    Desafio 2: Testa o fluxo onde o cartão é recusado por falta de limite.
-    """
+    
     mock_gateway = mocker.patch("pagamento.enviar_para_gateway")
     
     mock_gateway.return_value = {
